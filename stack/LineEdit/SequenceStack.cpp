@@ -87,7 +87,7 @@ SqStack ReverseStack(SqStack &S)
 		printf("can't reverse the stack!\n");
 		exit(1);
 	}
-	static SqStack stmp;
+	SqStack stmp;
 	InitStack(stmp);
 	ElemType e;
 

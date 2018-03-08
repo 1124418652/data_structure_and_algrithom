@@ -6,13 +6,37 @@ void main()
 {
 	SqStack stack;
 	InitStack(stack);
+	char elem;
+	char topelem, popelem;
 
-	for(int i=0; i<20; i++)
+	while(elem!='#')
 	{
-		PushElem(stack, i);
-	}
+		printf("please input the element:\t");
+		elem = getchar();
+		printf("\n");
 
-	printf("the number of the element is:\t%d\n",StackLength(stack));
-	printf("the value of the pop element is:\t%d\n",PopElem(stack));
+		if(elem=='['||elem=='(')
+		{
+			PushElem(stack, elem);
+		}
+
+		if(elem==']'||elem==')')
+		{
+			topelem = GetTopElem(stack);
+			if(!ElemMatch(topelem, elem))
+			{
+				printf("don't match!\n");
+				continue;
+			}
+			popelem = PopElem(stack);
+			printf("the matched elements are:%c\t%c\n",popelem,elem);
+		}
+
+		if(stack.top == stack.base)
+		{
+			printf("the stack is empty!\n");
+			exit(1);
+		}
+	}
 	system("pause");
 }

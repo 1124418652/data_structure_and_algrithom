@@ -3,7 +3,7 @@
 #define INITLENGTH 10
 #define STACKINCREMENT 5
 
-typedef int SElemType;
+typedef char SElemType;
 
 typedef struct
 {
@@ -16,3 +16,5 @@ void InitStack(SqStack &S);     //initial the stack
 int StackLength(SqStack &S);    //return the length of the stack
 void PushElem(SqStack &S, SElemType e);      //push the element in to the stack
 SElemType PopElem(SqStack &S);  //return the element which was poped
+SElemType GetTopElem(SqStack &S);            //get the top element
+bool ElemMatch(SElemType, SElemType);      

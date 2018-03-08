@@ -55,3 +55,27 @@ SElemType PopElem(SqStack &S)
 	e = *--S.top;
 	return e;
 }
+
+SElemType GetTopElem(SqStack &S)
+{
+	if(S.top==S.base)
+	{
+		printf("the stack is empty!\n");
+		exit(1);
+	}
+	return *(S.top-1);
+}
+
+bool ElemMatch(SElemType elem1, SElemType elem2)
+{
+	if(elem1=='[')
+	{
+		if(elem2==']') return true;
+		return false;
+	}
+	if(elem1=='(')
+	{
+		if(elem2==')') return true;
+		return false;
+	}
+}

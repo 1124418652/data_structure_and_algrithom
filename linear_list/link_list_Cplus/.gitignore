@@ -1,0 +1,5 @@
+*.dsw
+*.opt
+link_list_Cplus.dsp
+*.ncb
+Debug/*

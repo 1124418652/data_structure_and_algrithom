@@ -16,6 +16,7 @@ public:
 	Sort(T *list, int len);
 	~Sort();
 	void bubbleSort();
+
 	friend ostream& operator<<(ostream &output, const Sort<T> &sort)
 	{
 		for (int i=0; i<sort.length; i++)
@@ -70,3 +71,4 @@ void Sort<T>::bubbleSort()
 		}
 	}
 }
+

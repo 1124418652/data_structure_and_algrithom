@@ -5,6 +5,17 @@ using namespace std;
 #define EQ(a, b) ((a)==(b))
 #define LQ(a, b) ((a)<=(b))
 
+typedef int ElemType;
+
+typedef struct Stack{
+	int len;
+	ElemType *elem;
+}Stack;
+
+void initStack(struct Stack &s);
+ElemType pop(struct Stack &s);
+void push(struct Stack &s, ElemType elem);
+
 void quickSort(int *list, int min, int max)
 {
 	if (min<max)
